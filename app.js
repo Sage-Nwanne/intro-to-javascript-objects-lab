@@ -1,6 +1,6 @@
 const game = {
     party: [],
-    gyms: [
+    gyms: [ 
       { location: "Pewter City", completed: false, difficulty: 1 },
       { location: "Cerulean City", completed: false, difficulty: 2 },
       { location: "Vermilion City", completed: false, difficulty: 3 },
@@ -17,18 +17,7 @@ const game = {
     ],
   }
 
-
-
-
-
-
-
-  
-//   console.dir(pokemon, { maxArrayLength: null })
-
-// console.log (pokemon[58]);
-
-// console.log(game)
+console.log(game.party.length)
 
 /*
 ============================================= Exercise 3 ===========================================
@@ -36,26 +25,7 @@ const game = {
 2. Choose a value for "difficulty" that you think fits the game. Ex: "Easy", "Med" or "Hard". 
 */
 
-// // const game.difficulty() {
-//     for (let idx = 0, idx < 9, idx++ )
-//         if (game.gyms[idx] < 4 );{  
-//             console.log('Easy');
-
-//         } else if (game.gyms[idx] > 4 && game.gyms[idx] < 7 );{
-//             console.log('Med')
-
-//         } else {
-//             console.log('Hard')
-//         }
-
-// }
-
-// game.difficulty();
-
-// console.log(game);
-
-// need to debug
-
+game.difficulty = 'easy'
 
 
 
@@ -72,7 +42,7 @@ const game = {
 // Pokémon 25: Pikachu
 
 
-game.party = pokemon[3]
+game.party.push(pokemon[3])
 
 console.log ('excercise 4', game.party)
 
@@ -81,8 +51,10 @@ console.log ('excercise 4', game.party)
 // 2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
 
 //answer,,,,,,
-game.party = [pokemon[3], [pokemon[53]],[pokemon[29]],[pokemon[99]],]
-console.log ('excercise 5',game.party)
+
+ game.party.push(pokemon[53], pokemon[29], pokemon[99]); 
+
+console.log ('excercise 5', game.party)
 
 // ================================================ Exercise 6 ===================================================
 // 1. Set the `completed` property to true for gyms with a difficulty below 3.
@@ -93,6 +65,8 @@ console.log ('excercise 5',game.party)
 for (let idx = 0; idx < game.gyms.length; idx++){
     if (game.gyms[idx].difficulty < 3){
         game.gyms[idx].completed = true
+    } else {
+      game.completed = false
     }
 }
     console.log('excercise 6',game.gyms)
