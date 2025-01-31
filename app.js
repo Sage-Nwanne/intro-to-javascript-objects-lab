@@ -63,10 +63,11 @@ console.log ('excercise 5', game.party)
 
 
 for (let idx = 0; idx < game.gyms.length; idx++){
-    if (game.gyms[idx].difficulty < 3){
-        game.gyms[idx].completed = true
+    if (game.gyms[idx].difficulty < 0){
+        game.gyms[idx].completed === true
+
     } else {
-      game.completed = false
+      game.gyms.completed === false
     }
 }
     console.log('excercise 6',game.gyms)
